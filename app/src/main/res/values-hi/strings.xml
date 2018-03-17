@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">कृति</string>
+    <string name="enter_phone_number">अपना मोबाइल नंबर दर्ज करें</string>
+    <string name="enter_otp">ओटीपी दर्ज करें</string>
+    <string name="verify_otp_button">ओटीपी सत्यापित करें</string>
+</resources>

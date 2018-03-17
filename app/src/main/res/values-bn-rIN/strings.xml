@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ত্রুটি</string>
+    <string name="enter_phone_number">আপনার মোবাইল নাম্বার প্রবেশ করুন</string>
+    <string name="enter_otp">OTP লিখুন</string>
+    <string name="verify_otp_button">OTP যাচাই করুন</string>
+</resources>

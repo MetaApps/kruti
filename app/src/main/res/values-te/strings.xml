@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">కృతి</string>
+    <string name="enter_phone_number">మీ మొబైల్ నంబర్ను నమోదు చేయండి</string>
+    <string name="enter_otp">OTP ను ఎంటర్ చెయ్యండి</string>
+    <string name="verify_otp_button">OTP నిర్ధారించండి</string>
+</resources>

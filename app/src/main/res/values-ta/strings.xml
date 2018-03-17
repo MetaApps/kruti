@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">கருதி</string>
+    <string name="enter_phone_number">உங்களுடைய கைபேசி எண்ணை உள்ளிடவும்</string>
+    <string name="enter_otp">OTP ਦਰਜ ਕਰੋ</string>
+    <string name="verify_otp_button">OTP ஐ சரிபார்க்கவும்</string>
+</resources>

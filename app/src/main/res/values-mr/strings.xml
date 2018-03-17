@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">कृति</string>
+    <string name="enter_phone_number">तुमचा भ्रमणध्वनी क्रमांक टाका</string>
+    <string name="enter_otp">OTP प्रविष्ट करा</string>
+    <string name="verify_otp_button">OTP सत्यापित करा</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">കുരുതി</string>
+    <string name="enter_phone_number">നിങ്ങളുടെ മൊബൈൽ നമ്പർ നൽകുക</string>
+    <string name="enter_otp">OTP നൽകുക</string>
+    <string name="verify_otp_button">OTP പരിശോധിക്കുക</string>
+</resources>

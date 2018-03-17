@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="large_text">40sp</dimen>
+    <dimen name="small_text">15sp</dimen>
+    <dimen name="regular_text">17sp</dimen>
+    <dimen name="padding">10dp</dimen>
+    <dimen name="round_img_padding">2dp</dimen>
+    <dimen name="margin">5dp</dimen>
+    <dimen name="button_width">150dp</dimen>
+    <dimen name="cardView_margin">2dp</dimen>
+    <dimen name="helper_btn_size">20dp</dimen>
+</resources>

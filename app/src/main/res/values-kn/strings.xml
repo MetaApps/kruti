@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ಕೃತಿ</string>
+    <string name="enter_phone_number">ನಿಮ್ಮ ಮೊಬೈಲ್ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿ</string>
+    <string name="enter_otp">OTP ಯನ್ನು ನಮೂದಿಸಿ</string>
+    <string name="verify_otp_button">OTP ಪರಿಶೀಲಿಸಿ</string>
+</resources>

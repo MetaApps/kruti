@@ -1,0 +1,144 @@
+<resources>
+    <string name="app_name">kruti</string>
+
+    <!-- Activity : activity_otpverification-->
+    <string name="enter_phone_number">Enter your mobile number</string>
+    <string name="enter_otp">Enter OTP</string>
+    <string name="verify_otp_button">Verify OTP</string>
+
+    <!-- Activity : activity_profile_setup-->
+    <string name="category">Category</string>
+    <string name="select_category">Select Art Category : </string>
+    <string name="product">Products</string>
+    <string name="production_capacity">Monthly production capacity</string>
+
+    <!-- List of art categories-->
+    <string-array name="art_category_list">
+        <item>Select an Art Category</item>
+        <item>Metal Craft</item>
+        <item>Tribal Textiles</item>
+        <item>Tribal Jewellery</item>
+        <item>Tribal painting</item>
+        <item>Cane and Bamboo</item>
+        <item>Terracotta and Stone Pottery</item>
+        <item>Gift and Novelties</item>
+        <item>Organic and Natural Food Products</item>
+    </string-array>
+
+    <!-- List of languages-->
+    <string-array name="language_list">
+        <item>हिन्दी	</item>
+        <item>বাংলা	</item>
+        <item>తెలుగు	</item>
+        <item>मराठी	</item>
+        <item>தமிழ்	</item>
+        <item>ગુજરાતી	</item>
+        <item>ಕನ್ನಡ	</item>
+        <item>മലയാളം	</item>
+        <item>ਪੰਜਾਬੀ	</item>
+        <item>English</item>
+    </string-array>
+
+    <!-- List of products-->
+    <string-array name="product_list">
+        <item>Select a Product</item>
+        <item>Jewellery</item>
+        <item>Glass items</item>
+        <item>Stoles and scarfs</item>
+        <item>Tealight Holders</item>
+        <item>Windchimes</item>
+        <item>Art panels</item>
+        <item>Assorted Gifts</item>
+        <item>Bags</item>
+        <item>Ceramics</item>
+        <item>Bangles</item>
+        <item>Baskets</item>
+        <item>Beads</item>
+        <item>Bed Sheets</item>
+        <item>Bells</item>
+        <item>Bird Baths</item>
+        <item>Borders</item>
+        <item>Bowls</item>
+        <item>Boxes</item>
+        <item>Candles</item>
+        <item>Caps</item>
+        <item>Carpets</item>
+        <item>Carved Blocks</item>
+        <item>Chess Boards</item>
+        <item>Chests</item>
+        <item>Christmas Decorations</item>
+        <item>Clocks</item>
+        <item>Coasters</item>
+        <item>Corners</item>
+        <item>Cups</item>
+        <item>Curtains</item>
+        <item>Cushion Covers</item>
+        <item>Cutlery</item>
+        <item>Decanters</item>
+        <item>Decorative Items</item>
+        <item>Dhurries</item>
+        <item>Diffusers</item>
+        <item>Dolls</item>
+        <item>Door Handles and knobs</item>
+        <item>Dupatta</item>
+        <item>Fabric</item>
+        <item>File Folders</item>
+        <item>Flower Pots</item>
+        <item>Footwear</item>
+        <item>Framed Mirrors</item>
+        <item>Furnishing Fabric</item>
+        <item>Furniture</item>
+        <item>Garments</item>
+        <item>Gift Boxes</item>
+        <item>Gift Pouches</item>
+        <item>Gloves</item>
+        <item>Home Decor</item>
+        <item>Idols</item>
+        <item>Jaalis and Screens</item>
+        <item>Jackets</item>
+        <item>Journals</item>
+        <item>Key Chains</item>
+        <item>Kurtas</item>
+        <item>Lamp Shades</item>
+        <item>Lamps</item>
+        <item>Mats</item>
+        <item>Miniature Carpets</item>
+        <item>Miscellaneous Gifts</item>
+        <item>Mufflers</item>
+        <item>Mugs</item>
+        <item>Murals</item>
+        <item>Paintings</item>
+        <item>Panels</item>
+        <item>Paper Sheets</item>
+        <item>Paperweights</item>
+        <item>Pen Stands</item>
+        <item>Perfume Bottles</item>
+        <item>Phirans</item>
+        <item>Picture Frames</item>
+        <item>Planters</item>
+        <item>Plaques</item>
+        <item>Pots</item>
+        <item>Puppets</item>
+        <item>Quilts</item>
+        <item>Rugs</item>
+        <item>Runners</item>
+        <item>Saree</item>
+        <item>Stationary</item>
+        <item>Linen</item>
+        <item>Table Mats</item>
+        <item>Throws</item>
+        <item>Tiles</item>
+        <item>Torans</item>
+        <item>Towels</item>
+        <item>Toys</item>
+        <item>Trays</item>
+        <item>Vases</item>
+        <item>Walking Sticks</item>
+        <item>Wall Art</item>
+        <item>Wall Hanging</item>
+        <item>Wallets</item>
+        <item>Wedding Wear</item>
+        <item>Wraps</item>
+        <item>Crockery</item>
+    </string-array>
+</resources>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    tools:context="com.a6studios.kruti.package_ProfileSetup.ProfileSetupActivity"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_profile_pic"
+        android:background="@color/colorSecondaryDark"
+        android:paddingTop="40dp">
+        <android.support.v7.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:elevation="12dp"
+            android:id="@+id/cir_img"
+            app:cardCornerRadius="75dp"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:padding="2dp"
+            android:background="@color/primary_light"
+            android:layout_centerInParent="true"
+            android:thicknessRatio="1.9">
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="false"
+                android:background="@mipmap/ic_launcher"
+                android:clickable="false"
+                android:contentDescription=""
+                android:cropToPadding="true"
+                android:scaleType="fitCenter" />
+        </android.support.v7.widget.CardView>
+        <TextView
+            android:layout_below="@id/cir_img"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="40sp"
+            android:text="NAME"
+            android:textColor="@color/primary_light"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:verticalScrollbarPosition="right"
+        android:layout_marginTop="@dimen/margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/profile_cv_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:layout_margin="@dimen/cardView_margin"
+                app:cardBackgroundColor="@color/white">
+
+                <RelativeLayout
+                    android:id="@+id/rl_category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding">
+
+                    <TextView
+                        android:id="@+id/tv_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="@dimen/small_text"
+                        android:textColor="@color/foreground_light"
+                        android:text="@string/category"
+                        android:textStyle="bold"/>
+
+                    <android.support.v7.widget.AppCompatImageButton
+                        android:id="@+id/btn_category_info"
+                        android:layout_width="@dimen/helper_btn_size"
+                        android:layout_height="@dimen/helper_btn_size"
+                        android:layout_alignBottom="@+id/tv_category"
+                        android:src="@drawable/ic_info_black_24dp"
+                        android:background="@color/white"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="@dimen/margin" />
+
+                    <ImageButton
+                        android:id="@+id/btn_category_tts"
+                        android:layout_width="@dimen/helper_btn_size"
+                        android:layout_height="@dimen/helper_btn_size"
+                        android:layout_alignBottom="@id/tv_category"
+                        android:layout_toLeftOf="@id/btn_category_info"
+                        android:background="@color/white"
+                        android:src="@drawable/ic_hearing_black_24dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="@dimen/margin"/>
+
+                    <View
+                        android:id="@+id/category_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/primary_dark"
+                        android:layout_below="@id/tv_category"
+                        android:layout_marginTop="@dimen/margin"
+                        android:layout_marginBottom="@dimen/margin"
+                        android:layout_alignStart="@id/tv_category"
+                        android:layout_alignLeft="@id/tv_category"/>
+
+                    <!--<TextView
+                        android:id="@+id/tv_category_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_category"
+                        android:layout_below="@id/category_line"
+                        android:textSize="@dimen/regular_text"/>-->
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/category_line"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="@dimen/margin"
+                        android:entries="@array/art_category_list"
+                        android:spinnerMode="dropdown"/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/profile_cv_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:layout_margin="@dimen/cardView_margin"
+                app:cardBackgroundColor="@color/white">
+
+                <RelativeLayout
+                    android:id="@+id/rl_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding">
+
+                    <TextView
+                        android:id="@+id/tv_product"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="@dimen/small_text"
+                        android:textColor="@color/foreground_light"
+                        android:text="@string/product"
+                        android:textStyle="bold"/>
+
+                    <android.support.v7.widget.AppCompatImageButton
+                        android:id="@+id/btn_product_info"
+                        android:layout_width="@dimen/helper_btn_size"
+                        android:layout_height="@dimen/helper_btn_size"
+                        android:layout_alignBottom="@+id/tv_product"
+                        android:src="@drawable/ic_info_black_24dp"
+                        android:background="@color/white"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="@dimen/margin"/>
+
+                    <ImageButton
+                        android:id="@+id/btn_product_tts"
+                        android:layout_width="@dimen/helper_btn_size"
+                        android:layout_height="@dimen/helper_btn_size"
+                        android:layout_alignBottom="@id/tv_product"
+                        android:layout_toLeftOf="@id/btn_product_info"
+                        android:background="@color/white"
+                        android:src="@drawable/ic_hearing_black_24dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="@dimen/margin"/>
+
+                    <View
+                        android:id="@+id/product_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/primary_dark"
+                        android:layout_below="@id/tv_product"
+                        android:layout_marginTop="@dimen/margin"
+                        android:layout_marginBottom="@dimen/margin"
+                        android:layout_alignStart="@id/tv_product"
+                        android:layout_alignLeft="@id/tv_product"/>
+
+                    <!--<TextView
+                        android:id="@+id/tv_category_content"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/select_category"
+                        android:layout_below="@id/category_line"
+                        android:textSize="@dimen/regular_text"/>-->
+
+                    <Spinner
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/product_line"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="@dimen/margin"
+                        android:entries="@array/product_list"
+                        android:spinnerMode="dialog"/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/profile_cv_capacity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding"
+                android:layout_margin="@dimen/cardView_margin"
+                app:cardBackgroundColor="@color/white">
+
+                <RelativeLayout
+                    android:id="@+id/rl_capacity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding">
+
+                    <TextView
+                        android:id="@+id/tv_capacity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:textSize="@dimen/small_text"
+                        android:textColor="@color/foreground_light"
+                        android:text="@string/production_capacity"
+                        android:textStyle="bold"/>
+
+                    <android.support.v7.widget.AppCompatImageButton
+                        android:id="@+id/btn_capacity_info"
+                        android:layout_width="@dimen/helper_btn_size"
+                        android:layout_height="@dimen/helper_btn_size"
+                        android:layout_alignBottom="@+id/tv_capacity"
+                        android:src="@drawable/ic_info_black_24dp"
+                        android:background="@color/white"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="@dimen/margin"/>
+
+                    <ImageButton
+                        android:id="@+id/btn_capacity_tts"
+                        android:layout_width="@dimen/helper_btn_size"
+                        android:layout_height="@dimen/helper_btn_size"
+                        android:layout_alignBottom="@id/tv_capacity"
+                        android:layout_toLeftOf="@id/btn_capacity_info"
+                        android:background="@color/white"
+                        android:src="@drawable/ic_hearing_black_24dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginLeft="@dimen/margin"/>
+
+                    <View
+                        android:id="@+id/capacity_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/primary_dark"
+                        android:layout_below="@id/tv_capacity"
+                        android:layout_marginTop="@dimen/margin"
+                        android:layout_marginBottom="@dimen/margin"
+                        android:layout_alignStart="@id/tv_capacity"
+                        android:layout_alignLeft="@id/tv_capacity"/>
+
+                    <EditText
+                        android:layout_width="@dimen/button_width"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/capacity_line"
+                        android:inputType="number"
+                        android:layout_marginLeft="10dp"/>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
