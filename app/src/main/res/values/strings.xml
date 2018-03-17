@@ -11,6 +11,11 @@
     <string name="select_category">Select Art Category : </string>
     <string name="product">Products</string>
     <string name="production_capacity">Monthly production capacity</string>
+    <string name="btn_save">Save</string>
+    <string name="product_description">Description</string>
+    <string name="product_description_hint">Description of your product</string>
+    <string name="address">Address</string>
+    <string name="address_hint">Enter your address</string>
 
     <!-- List of art categories-->
     <string-array name="art_category_list">

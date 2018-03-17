@@ -32,19 +32,24 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:id="@+id/ver_button"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:padding="@dimen/padding">
         <Button
+            android:id="@+id/btn_unreg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="unregistered"
-            android:id="@+id/btn_unreg"
-            android:layout_weight="1"/>
+            android:layout_weight="1"
+            android:background="@drawable/roundrect2"
+            android:layout_marginRight="@dimen/margin"/>
         <Button
+            android:id="@+id/btn_reg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="registered"
             android:layout_weight="1"
-            android:id="@+id/btn_reg"/>
+            android:layout_marginLeft="@dimen/margin"
+            android:background="@drawable/roundrect2"/>
     </LinearLayout>
 
 </RelativeLayout>
