@@ -4,4 +4,15 @@
     <string name="enter_phone_number">మీ మొబైల్ నంబర్ను నమోదు చేయండి</string>
     <string name="enter_otp">OTP ను ఎంటర్ చెయ్యండి</string>
     <string name="verify_otp_button">OTP నిర్ధారించండి</string>
+
+    <string name="category">	వర్గం	</string>
+    <string name="select_category">	కళ వర్గం ఎంచుకోండి:	</string>
+    <string name="product">	ఉత్పత్తులు	</string>
+    <string name="production_capacity">	నెలసరి ఉత్పత్తి సామర్థ్యం	</string>
+    <string name="btn_save">	సేవ్	</string>
+    <string name="product_description">	వివరణ	</string>
+    <string name="product_description_hint">	మీ ఉత్పత్తి వివరణ	</string>
+    <string name="address">	చిరునామా	</string>
+    <string name="address_hint">	మీ చిరునామాను నమోదు చేయండి	</string>
+
 </resources>

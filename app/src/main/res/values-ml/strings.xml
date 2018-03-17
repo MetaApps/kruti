@@ -4,4 +4,15 @@
     <string name="enter_phone_number">നിങ്ങളുടെ മൊബൈൽ നമ്പർ നൽകുക</string>
     <string name="enter_otp">OTP നൽകുക</string>
     <string name="verify_otp_button">OTP പരിശോധിക്കുക</string>
+
+    <string name="category">	വിഭാഗം	</string>
+    <string name="select_category">	കല വിഭാഗം തിരഞ്ഞെടുക്കുക:	</string>
+    <string name="product">	ഉൽപ്പന്നങ്ങൾ	</string>
+    <string name="production_capacity">	പ്രതിമാസ ഉത്പാദന ക്ഷമത	</string>
+    <string name="btn_save">	രക്ഷിക്കും	</string>
+    <string name="product_description">	വിവരണം	</string>
+    <string name="product_description_hint">	നിങ്ങളുടെ ഉൽപ്പന്നത്തിന്റെ വിവരണം	</string>
+    <string name="address">	വിലാസം	</string>
+    <string name="address_hint">	നിങ്ങളുടെ വിലാസം നൽകുക	</string>
+
 </resources>

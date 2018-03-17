@@ -4,4 +4,15 @@
     <string name="enter_phone_number">আপনার মোবাইল নাম্বার প্রবেশ করুন</string>
     <string name="enter_otp">OTP লিখুন</string>
     <string name="verify_otp_button">OTP যাচাই করুন</string>
+
+    <string name="category">	বিভাগ	</string>
+    <string name="select_category">	শিল্প বিভাগ নির্বাচন করুন:	</string>
+    <string name="product">	পণ্য	</string>
+    <string name="production_capacity">	মাসিক উৎপাদন ক্ষমতা	</string>
+    <string name="btn_save">	সংরক্ষণ করুন	</string>
+    <string name="product_description">	বিবরণ	</string>
+    <string name="product_description_hint">	আপনার পণ্য বর্ণনা	</string>
+    <string name="address">	ঠিকানা	</string>
+    <string name="address_hint">	আপনার ঠিকানা লিখুন	</string>
+
 </resources>

@@ -4,4 +4,15 @@
     <string name="enter_phone_number">अपना मोबाइल नंबर दर्ज करें</string>
     <string name="enter_otp">ओटीपी दर्ज करें</string>
     <string name="verify_otp_button">ओटीपी सत्यापित करें</string>
+
+    <string name="category">	वर्ग	</string>
+    <string name="select_category">	कला श्रेणी का चयन करें:	</string>
+    <string name="product">	उत्पाद	</string>
+    <string name="production_capacity">	मासिक उत्पादन क्षमता	</string>
+    <string name="btn_save">	बचाना	</string>
+    <string name="product_description">	विवरण	</string>
+    <string name="product_description_hint">	आपके उत्पाद का विवरण	</string>
+    <string name="address">	पता	</string>
+    <string name="address_hint">	अपना पता दर्ज करें	</string>
+
 </resources>

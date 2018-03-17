@@ -4,4 +4,15 @@
     <string name="enter_phone_number">ನಿಮ್ಮ ಮೊಬೈಲ್ ಸಂಖ್ಯೆಯನ್ನು ನಮೂದಿಸಿ</string>
     <string name="enter_otp">OTP ಯನ್ನು ನಮೂದಿಸಿ</string>
     <string name="verify_otp_button">OTP ಪರಿಶೀಲಿಸಿ</string>
+
+    <string name="category">	ವರ್ಗ	</string>
+    <string name="select_category">	ಆರ್ಟ್ ವರ್ಗವನ್ನು ಆಯ್ಕೆ ಮಾಡಿ:	</string>
+    <string name="product">	ಉತ್ಪನ್ನಗಳು	</string>
+    <string name="production_capacity">	ಮಾಸಿಕ ಉತ್ಪಾದನಾ ಸಾಮರ್ಥ್ಯ	</string>
+    <string name="btn_save">	ಉಳಿಸಿ	</string>
+    <string name="product_description">	ವಿವರಣೆ	</string>
+    <string name="product_description_hint">	ನಿಮ್ಮ ಉತ್ಪನ್ನದ ವಿವರಣೆ	</string>
+    <string name="address">	ವಿಳಾಸ	</string>
+    <string name="address_hint">	ನಿಮ್ಮ ವಿಳಾಸವನ್ನು ನಮೂದಿಸಿ	</string>
+
 </resources>

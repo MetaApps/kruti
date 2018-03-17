@@ -4,4 +4,15 @@
     <string name="enter_phone_number">உங்களுடைய கைபேசி எண்ணை உள்ளிடவும்</string>
     <string name="enter_otp">OTP ਦਰਜ ਕਰੋ</string>
     <string name="verify_otp_button">OTP ஐ சரிபார்க்கவும்</string>
+
+    <string name="category">	வகை	</string>
+    <string name="select_category">	கலை வகை தேர்வு:	</string>
+    <string name="product">	தயாரிப்புகள்	</string>
+    <string name="production_capacity">	மாதாந்த உற்பத்தி திறன்	</string>
+    <string name="btn_save">	சேமி	</string>
+    <string name="product_description">	விளக்கம்	</string>
+    <string name="product_description_hint">	உங்கள் தயாரிப்பு விவரம்	</string>
+    <string name="address">	முகவரி	</string>
+    <string name="address_hint">	உங்கள் முகவரியை உள்ளிடுக	</string>
+
 </resources>

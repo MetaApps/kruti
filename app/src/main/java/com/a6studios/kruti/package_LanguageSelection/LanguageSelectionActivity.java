@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.a6studios.kruti.R;
+import com.a6studios.kruti.package_OTPVerification.OTPVerificationActivity;
 
 import java.sql.Array;
 import java.util.Locale;
@@ -56,5 +57,6 @@ public class LanguageSelectionActivity extends AppCompatActivity {
         Configuration conf = res.getConfiguration();
         conf.locale = mylocale;
         res.updateConfiguration(conf,dm);
+        startActivity(new Intent(this, OTPVerificationActivity.class));
     }
 }

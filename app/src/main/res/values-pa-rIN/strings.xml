@@ -4,4 +4,15 @@
     <string name="enter_phone_number">ਆਪਣਾ ਮੋਬਾਈਲ ਨੰਬਰ ਦਾਖਲ ਕਰੋ</string>
     <string name="enter_otp">Enter OTP</string>
     <string name="verify_otp_button">OTP ਪ੍ਰਮਾਣਿਤ ਕਰੋ</string>
+
+    <string name="category">	ਸ਼੍ਰੇਣੀ	</string>
+    <string name="select_category">	ਕਲਾ ਸ਼੍ਰੇਣੀ ਚੁਣੋ:	</string>
+    <string name="product">	ਉਤਪਾਦ	</string>
+    <string name="production_capacity">	ਮਹੀਨਾਵਾਰ ਉਤਪਾਦਨ ਸਮਰੱਥਾ	</string>
+    <string name="btn_save">	ਸੇਵ ਕਰੋ	</string>
+    <string name="product_description">	ਵਰਣਨ	</string>
+    <string name="product_description_hint">	ਤੁਹਾਡੇ ਉਤਪਾਦ ਦਾ ਵੇਰਵਾ	</string>
+    <string name="address">	ਪਤਾ	</string>
+    <string name="address_hint">	ਆਪਣਾ ਪਤਾ ਦਾਖਲ ਕਰੋ	</string>
+
 </resources>

@@ -40,6 +40,7 @@
         android:padding="5dp"/>
 
     <Button
+        android:id="@+id/btn_verify_otp"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/id_OTP"
