@@ -30,10 +30,10 @@ public class OTPVerificationActivity extends AppCompatActivity implements View.O
         otpVerify = (Button) findViewById(R.id.btn_verify_otp);
         otpVerify.setOnClickListener(this);
 
-
     }
 
     public void setLanguage(){
+        String lang = "hi";
     }
 
     @Override
