@@ -14,7 +14,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import com.a6studios.kruti.R;
-import com.a6studios.kruti.SharedPref;
+import com.a6studios.kruti.SingletonSharedPref;
 import com.a6studios.kruti.package_OTPVerification.OTPVerificationActivity;
 
 import java.sql.Array;
@@ -58,17 +58,21 @@ public class LanguageSelectionActivity extends AppCompatActivity {
                 //Intent intent = new Intent(this, OTPVerificationActivity.class);
 
                 switch (position){
-                    case 0:saveLanguageDetails("hi");startOTPVerificationActivity();break;
-                    case 1:saveLanguageDetails("bn");startOTPVerificationActivity();break;
-                    case 2:saveLanguageDetails("te");startOTPVerificationActivity();break;
-                    case 3:saveLanguageDetails("mr");startOTPVerificationActivity();break;
-                    case 4:saveLanguageDetails("tn");startOTPVerificationActivity();break;
-                    case 5:saveLanguageDetails("gu");startOTPVerificationActivity();break;
-                    case 6:saveLanguageDetails("kn");startOTPVerificationActivity();break;
-                    case 7:saveLanguageDetails("ml");startOTPVerificationActivity();break;
-                    case 8:saveLanguageDetails("pa");startOTPVerificationActivity();break;
-                    case 9:saveLanguageDetails("en");startOTPVerificationActivity();
+                    case 0:lang = "hi";break;
+                    case 1:lang = "bn";break;
+                    case 2:lang = "te";break;
+                    case 3:lang = "mr";break;
+                    case 4:lang = "tn";break;
+                    case 5:lang = "gu";break;
+                    case 6:lang = "kn";break;
+                    case 7:lang = "ml";break;
+                    case 8:lang = "pa";break;
+                    case 9:lang = "te";
                 }
+
+                setLocale(lang);
+                /*saveLanguageDetails(lang);
+                startOTPVerificationActivity();*/
 
                 /*editor.putString("lang",lang);
                 editor.commit();*/
@@ -85,7 +89,8 @@ public class LanguageSelectionActivity extends AppCompatActivity {
     }
 
     public void saveLanguageDetails(String lang){
-        new SharedPref(this).saveLanguage(lang);
+        SingletonSharedPref mSSP = SingletonSharedPref.getPreference(this,"KrutiSharedPref");
+        mSSP.putLanguage(lang);
     }
 
     public void setLocale(String lang){

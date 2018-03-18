@@ -12,7 +12,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.a6studios.kruti.R;
-import com.a6studios.kruti.SharedPref;
+import com.a6studios.kruti.SingletonSharedPref;
 import com.a6studios.kruti.package_ProfileSetup.ProfileSetupActivity;
 
 import java.util.Locale;
@@ -30,10 +30,21 @@ public class OTPVerificationActivity extends AppCompatActivity implements View.O
         otpVerify = (Button) findViewById(R.id.btn_verify_otp);
         otpVerify.setOnClickListener(this);
 
+       //setLanguage();
+
     }
 
     public void setLanguage(){
-        String lang = "hi";
+        SingletonSharedPref mSSP = SingletonSharedPref.getPreference(this,"KrutiSharedPref");
+        String trLanguage = SingletonSharedPref.getLanguage();
+        Locale mlocale = new Locale(trLanguage);
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = mlocale;
+        res.updateConfiguration(conf,dm);
+        Intent resume = new Intent(this, OTPVerificationActivity.class);
+        startActivity(resume);
     }
 
     @Override
