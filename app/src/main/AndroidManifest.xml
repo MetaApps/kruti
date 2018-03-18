@@ -10,16 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity android:name=".package_QRScanner.QRScannerActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".package_QRScanner.QRScannerActivity" />
         <activity android:name=".package_OTPVerification.OTPVerificationActivity" />
         <activity android:name=".package_LanguageSelection.LanguageSelectionActivity" />
-        <activity android:name=".package_ProfileSetup.ProfileSetupActivity"></activity>
+        <activity android:name=".package_ProfileSetup.ProfileSetupActivity"/>
     </application>
 
 </manifest>
