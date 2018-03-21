@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.a6studios.kruti.package_MainActivity.MainActivity">
+    tools:context="com.a6studios.kruti.package_MainActivity.MainActivity"
+    android:orientation="vertical"
+    android:background="@color/background_light">
 
    <!-- <Update BY SASANKA>&lt;!&ndash;&ndash;&gt;</Update>-->
 
     <!-- <Update BY SHREYAS>&lt;!&ndash;&ndash;&gt;</Update>-->
 
     <android.support.v7.widget.CardView
-        android:layout_width="0dp"
+        android:id="@+id/user_menu"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
         android:clickable="false"
         android:focusable="true"
         android:foreground="?android:attr/selectableItemBackground"
-        android:background="@color/background_light">
+        android:background="@color/background_light"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp">
 
         <TableLayout
             android:layout_width="wrap_content"
@@ -44,7 +48,62 @@
         </TableLayout>
 
     </android.support.v7.widget.CardView>
-</LinearLayout>
+
+
+
+    <LinearLayout
+        android:clipToPadding="false"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:id="@+id/textSliderLayout"
+        android:layout_below="@+id/user_menu">
+            <android.support.v7.widget.CardView
+                android:foreground="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="20sp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="5dp"
+                        android:text="UPCOMING EVENTS"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/primary_dark"
+                        android:layout_margin="10dp"/>
+
+                    <android.support.v4.view.ViewPager
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:id="@+id/textSlider"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_gravity="center"/>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+</RelativeLayout>
 
 
     <!--<android.support.v7.widget.CardView
