@@ -9,23 +9,43 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".package_MainActivity.MainActivity" android:screenOrientation="portrait">
-            <!--<intent-filter>
+        <activity
+            android:name=".package_MainActivity.MainActivity"
+            android:screenOrientation="portrait">
+
+            <!--
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
+            -->
         </activity>
-        <activity android:name=".package_QRScanner.QRScannerActivity" android:screenOrientation="portrait">
+        <activity
+            android:name=".package_QRScanner.QRScannerActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".package_OTPVerification.OTPVerificationActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".package_LanguageSelection.LanguageSelectionActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".package_ProfileSetup.ProfileSetupActivity" android:screenOrientation="portrait"/>
+        <activity
+            android:name=".package_OTPVerification.OTPVerificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".package_LanguageSelection.LanguageSelectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".package_ProfileSetup.ProfileSetupActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".package_AskQuery.AskQueryActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".package_QueryForm.QueryFormActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>

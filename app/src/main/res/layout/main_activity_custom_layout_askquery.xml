@@ -5,10 +5,11 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:padding="25dp"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:id="@+id/ask_query_ll">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/cardView_ask_query"
+        android:id="@+id/ask_query_cv"
         android:layout_width="100dp"
         android:layout_height="100dp"
         app:cardBackgroundColor="@color/buttonLabel"
@@ -25,6 +26,7 @@
     </android.support.v7.widget.CardView>
 
     <TextView
+        android:id="@+id/ask_query_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/ask_query"

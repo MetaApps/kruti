@@ -152,4 +152,5 @@
         <item>Wraps</item>
         <item>Crockery</item>
     </string-array>
+    <string name="title_activity_ask_query">AskQueryActivity</string>
 </resources>
