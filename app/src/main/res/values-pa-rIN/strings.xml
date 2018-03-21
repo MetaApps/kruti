@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">kruti</string>
     <string name="enter_phone_number">ਆਪਣਾ ਮੋਬਾਈਲ ਨੰਬਰ ਦਾਖਲ ਕਰੋ</string>
-    <string name="enter_otp">Enter OTP</string>
+    <string name="enter_otp">OTP ਦਰਜ ਕਰੋ</string>
     <string name="verify_otp_button">OTP ਪ੍ਰਮਾਣਿਤ ਕਰੋ</string>
 
     <string name="category">	ਸ਼੍ਰੇਣੀ	</string>

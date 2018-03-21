@@ -62,12 +62,12 @@ public class LanguageSelectionActivity extends AppCompatActivity {
                     case 1:lang = "bn";break;
                     case 2:lang = "te";break;
                     case 3:lang = "mr";break;
-                    case 4:lang = "tn";break;
+                    case 4:lang = "ta";break;
                     case 5:lang = "gu";break;
                     case 6:lang = "kn";break;
                     case 7:lang = "ml";break;
                     case 8:lang = "pa";break;
-                    case 9:lang = "te";
+                    case 9:lang = "en";
                 }
 
                 setLocale(lang);

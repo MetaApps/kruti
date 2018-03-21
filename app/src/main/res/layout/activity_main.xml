@@ -1,23 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.a6studios.kruti.MainActivity">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+    tools:context="com.a6studios.kruti.package_MainActivity.MainActivity">
 
    <!-- <Update BY SASANKA>&lt;!&ndash;&ndash;&gt;</Update>-->
 
     <!-- <Update BY SHREYAS>&lt;!&ndash;&ndash;&gt;</Update>-->
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:background="@color/background_light">
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:clickable="false">
+
+            <TableRow>
+
+                <include layout="@layout/main_activity_custom_layout_askquery" />
+                <include layout="@layout/main_activity_custom_layout_chat" />
+
+            </TableRow>
+
+            <TableRow>
+
+                <include layout="@layout/main_activity_custom_layout_profile" />
+                <include layout="@layout/main_activity_custom_layout_call" />
+
+            </TableRow>
+
+        </TableLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>
+
+
+    <!--<android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:layout_gravity="center_horizontal">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TableRow android:gravity="center">
+
+                    <include layout="@layout/main_activity_custom_layout_askquery" />
+
+                </TableRow>
+
+            </TableLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/margin">
+
+        </android.support.v7.widget.CardView>-->

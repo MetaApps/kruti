@@ -15,4 +15,16 @@
     <string name="address">	చిరునామా	</string>
     <string name="address_hint">	మీ చిరునామాను నమోదు చేయండి	</string>
 
+    <string-array name="art_category_list">
+        <item>ఒక కళ వర్గం ఎంచుకోండి	</item>
+        <item>మెటల్ క్రాఫ్ట్	</item>
+        <item>గిరిజన వస్త్రాలు	</item>
+        <item>గిరిజన జ్యువెలరీ	</item>
+        <item>గిరిజన పెయింటింగ్	</item>
+        <item>చెరకు మరియు వెదురు	</item>
+        <item>టెర్రకోట మరియు స్టోన్ కుమ్మరి	</item>
+        <item>బహుమతి మరియు వింతలు	</item>
+        <item>సేంద్రీయ మరియు సహజ ఆహార ఉత్పత్తులు	</item>
+    </string-array>
+
 </resources>

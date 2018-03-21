@@ -17,6 +17,12 @@
     <string name="address">Address</string>
     <string name="address_hint">Enter your address</string>
 
+    <!-- Activity : activity_main-->
+    <string name="ask_query">Ask Query</string>
+    <string name="call">Call</string>
+    <string name="profile">Profile</string>
+    <string name="chat">Chat</string>
+
     <!-- List of art categories-->
     <string-array name="art_category_list">
         <item>Select an Art Category</item>
