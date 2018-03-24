@@ -8,7 +8,7 @@
     tools:context="com.a6studios.kruti.package_QRScanner.QRScannerActivity">
 
     <SurfaceView
-        android:id="@+id/surfaceView"
+        android:id="@+id/camera_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
@@ -25,6 +25,12 @@
         android:text="Scan Aadhar QR"
         android:textColor="@android:color/white"
         android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/code_info"
+        android:layout_above="@+id/ver_button"/>
 
 
     <LinearLayout

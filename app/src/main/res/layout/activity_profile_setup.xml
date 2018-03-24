@@ -68,6 +68,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+<!--
             <android.support.v7.widget.CardView
                 android:id="@+id/profile_cv_category"
                 android:layout_width="match_parent"
@@ -132,13 +133,13 @@
                         android:layout_alignStart="@id/tv_category"
                         android:layout_alignLeft="@id/tv_category"/>
 
-                    <!--<TextView
+                    &lt;!&ndash;<TextView
                         android:id="@+id/tv_category_content"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/select_category"
                         android:layout_below="@id/category_line"
-                        android:textSize="@dimen/regular_text"/>-->
+                        android:textSize="@dimen/regular_text"/>&ndash;&gt;
 
                     <Spinner
                         android:layout_width="wrap_content"
@@ -152,6 +153,7 @@
 
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
+-->
 
             <android.support.v7.widget.CardView
                 android:id="@+id/profile_cv_product"
@@ -310,7 +312,8 @@
                         android:layout_below="@id/description_line"
                         android:layout_marginLeft="10dp"
                         android:layout_marginStart="@dimen/margin"
-                        android:hint="@string/product_description_hint"/>
+                        android:hint="@string/product_description_hint"
+                        android:focusable="auto"/>
 
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
@@ -379,7 +382,8 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/capacity_line"
                         android:inputType="number"
-                        android:layout_marginLeft="10dp"/>
+                        android:layout_marginLeft="10dp"
+                        android:focusable="auto"/>
 
                 </RelativeLayout>
             </android.support.v7.widget.CardView>

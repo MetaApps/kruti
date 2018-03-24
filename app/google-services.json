@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "98978612389",
+    "firebase_url": "https://kruti-b8aab.firebaseio.com",
+    "project_id": "kruti-b8aab",
+    "storage_bucket": "kruti-b8aab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:98978612389:android:baff4a21e24a772f",
+        "android_client_info": {
+          "package_name": "com.a6studios.kruti"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "98978612389-gailgmreqv5cl1sch8hjm0ncn2ptmgga.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJq3UQxPHDToHbgF5ILWPZ4cO0Ie5RkhE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
