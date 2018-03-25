@@ -55,6 +55,7 @@
     </RelativeLayout>
 
     <ScrollView
+        android:id="@+id/profile_setup_sv"
         android:layout_width="match_parent"
         android:layout_height="280dp"
         android:verticalScrollbarPosition="right"
@@ -228,8 +229,7 @@
                         android:layout_marginTop="@dimen/margin"
                         android:entries="@array/product_list"
                         android:spinnerMode="dialog"
-                        android:id="@+id/spinner"
-                        android:prompt="@string/profile"/>
+                        android:id="@+id/spinner" />
 
                     <!--<TextView
                         android:id="@+id/textView"

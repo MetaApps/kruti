@@ -6,9 +6,12 @@ import android.net.Uri;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 
 import com.a6studios.kruti.R;
 import com.a6studios.kruti.package_MainActivity.MainActivity;
@@ -39,6 +42,18 @@ public class ProfileSetupActivity extends AppCompatActivity implements View.OnCl
             @Override
             public void onClick(View view) {
                 chooseImage();
+            }
+        });
+
+        ScrollView view = (ScrollView)findViewById(R.id.profile_setup_sv);
+        view.setDescendantFocusability(ViewGroup.FOCUS_BEFORE_DESCENDANTS);
+        view.setFocusable(true);
+        view.setFocusableInTouchMode(true);
+        view.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                v.requestFocusFromTouch();
+                return false;
             }
         });
     }
