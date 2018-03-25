@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:drawable="@color/accent_light"/>
+    <item android:drawable="@drawable/background"/>
 
     <item>
         <bitmap android:gravity="center"
-            android:src="@drawable/splash_round" />
+            android:src="@drawable/splash_round_xxxhdpi" />
     </item>
 
 </layer-list>

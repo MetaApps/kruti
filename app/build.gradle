@@ -35,6 +35,8 @@ dependencies {
     compile 'com.google.android.gms:play-services-auth:11.8.0'
     compile 'com.firebaseui:firebase-ui-auth:3.2.2'
     compile 'com.firebaseui:firebase-ui:2.0.1'
+
+    //compile 'com.github.pratikbutani:MultiSelectSpinner:08d324c987'
 }
 //apply plugin: 'com.jfrog.bintray'
 apply plugin: 'com.google.gms.google-services'

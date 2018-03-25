@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.a6studios.kruti.package_ProfileSetup.ProfileSetupActivity;
 import com.a6studios.kruti.package_QRScanner.QRScannerActivity;
 
 public class SplashScreen extends AppCompatActivity {
