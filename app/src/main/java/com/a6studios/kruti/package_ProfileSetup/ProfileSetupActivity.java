@@ -69,7 +69,7 @@ public class ProfileSetupActivity extends AppCompatActivity implements View.OnCl
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        if(requestCode == PICK_IMAGE_REQUEST && requestCode == RESULT_OK && data != null && data.getData() != null){
+        if(requestCode == PICK_IMAGE_REQUEST && resultCode != RESULT_CANCELED){
             filePath = data.getData();
 
             try{
