@@ -1,13 +1,20 @@
 package com.a6studios.kruti.package_MainActivity;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
+import android.os.Build;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.a6studios.kruti.R;
 import com.a6studios.kruti.package_AskQuery.AskQueryActivity;
@@ -22,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     LinearLayout linearLayout;
     LinearLayout ask_query_ll, chat, profile, call;
     TextView ask_query_text, chat_text, profile_text, call_text;
-    CardView ask_query_cv;
+    CardView ask_query_cv, call_cv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +46,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         chat = (LinearLayout) findViewById(R.id.chat);
         profile = (LinearLayout) findViewById(R.id.profile);
+
+        //call
         call = (LinearLayout) findViewById(R.id.call);
+        call_text = (TextView) findViewById(R.id.call_text);
+        call_cv = (CardView) findViewById(R.id.call_cv);
+        call.setOnClickListener(this);
+        call_cv.setOnClickListener(this);
+        call_text.setOnClickListener(this);
 
         //ask_query
         ask_query_ll.setOnClickListener(this);
@@ -49,7 +63,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         chat.setOnClickListener(this);
         profile.setOnClickListener(this);
-        call.setOnClickListener(this);
+
 
         textSliderAdapter = new TextSliderAdapter(this);
 
@@ -61,9 +75,52 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        if(view == ask_query_ll || view == ask_query_cv || view ==ask_query_text ){
+        if (view == ask_query_ll || view == ask_query_cv || view == ask_query_text) {
             Intent intent = new Intent(this, AskQueryActivity.class);
             startActivity(intent);
+        }
+
+        if (view == call || view == call_cv || view == call_text) {
+            /*if (isPermissionGranted()) {
+                call_action();
+            }*/
+
+            String phnum = "1234567890";
+            Intent callIntent = new Intent(Intent.ACTION_CALL);
+            callIntent.setData(Uri.parse("tel:" + phnum));
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+                // TODO: Consider calling
+                //    ActivityCompat#requestPermissions
+                // here to request the missing permissions, and then overriding
+                //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
+                //                                          int[] grantResults)
+                // to handle the case where the user grants the permission. See the documentation
+                // for ActivityCompat#requestPermissions for more details.
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE}, 1);
+                return;
+            }
+            startActivity(callIntent);
+        }
+    }
+
+
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, String permissions[], int[] grantResults) {
+        switch (requestCode) {
+
+            case 1: {
+
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    Toast.makeText(getApplicationContext(), "Permission granted", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Permission denied", Toast.LENGTH_SHORT).show();
+                }
+                return;
+            }
+
+            // other 'case' lines to check for other
+            // permissions this app might request
         }
     }
 
