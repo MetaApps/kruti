@@ -1,7 +1,9 @@
 package com.a6studios.kruti.package_QRScanner;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -15,6 +17,7 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.a6studios.kruti.QRXMLParser;
 import com.a6studios.kruti.R;
 import com.a6studios.kruti.package_LanguageSelection.LanguageSelectionActivity;
 import com.google.android.gms.vision.CameraSource;
@@ -32,6 +35,12 @@ public class QRScannerActivity extends AppCompatActivity implements View.OnClick
 
     Button btn_reg;
     Button btn_unreg;
+
+    String name, vtc, dist, pin, uid__details, uid;
+    String uidia_xml;
+
+    SharedPreferences sharedPreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,7 +101,25 @@ public class QRScannerActivity extends AppCompatActivity implements View.OnClick
                     barcodeInfo.post(new Runnable() {
                         @Override
                         public void run() {
-                            barcodeInfo.setText(barcodes.valueAt(0).rawValue);
+                            //barcodeInfo.setText(barcodes.valueAt(0).rawValue);
+                            uidia_xml = barcodes.valueAt(0).rawValue;
+                            QRXMLParser qrxmlParser = new QRXMLParser(uidia_xml);
+                            name = qrxmlParser.getAttribute("name");
+                            uid = qrxmlParser.getAttribute("uid");
+                            dist = qrxmlParser.getAttribute("dist");
+                            vtc = qrxmlParser.getAttribute("vtc");
+                            pin = qrxmlParser.getAttribute("pc");
+                            uid__details = name+","+uid+","+dist+","+vtc+","+pin;
+                            sharedPreferences = getSharedPreferences("uid_details",MODE_PRIVATE);
+                            SharedPreferences.Editor editor = sharedPreferences.edit();
+                            editor.putString("Name",name);
+                            editor.putString("UID",uid);
+                            editor.putString("District",dist);
+                            editor.putString("VTC",vtc);
+                            editor.putString("PINCODE",pin);
+                            editor.putString("UIDIA_XML",uidia_xml);
+                            editor.apply();
+                            editor.commit();
                         }
                     });
                 }
@@ -104,8 +131,9 @@ public class QRScannerActivity extends AppCompatActivity implements View.OnClick
     @Override
     public void onClick(View view) {
         if(view == btn_unreg){
+            Intent languageSelectionActivity = new Intent(this,LanguageSelectionActivity.class);
             finish();
-            startActivity(new Intent(this, LanguageSelectionActivity.class));
+            startActivity(languageSelectionActivity);
         }
     }
 }

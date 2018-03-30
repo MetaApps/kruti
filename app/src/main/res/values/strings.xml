@@ -17,6 +17,12 @@
     <string name="address">Address</string>
     <string name="address_hint">Enter your address</string>
 
+    <!--TTS-->
+    <string name="select_a_product">Select a product</string>
+    <string name="enter_product_description">Enter your product description</string>
+    <string name="enter_production_capacity">Enter monthly production capacity</string>
+    <string name="enter_address">Enter your address</string>
+
     <!-- Activity : activity_main-->
     <string name="ask_query">Ask Query</string>
     <string name="call">Call</string>

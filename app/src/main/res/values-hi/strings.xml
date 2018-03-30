@@ -5,6 +5,8 @@
     <string name="enter_otp">ओटीपी दर्ज करें</string>
     <string name="verify_otp_button">ओटीपी सत्यापित करें</string>
 
+    <string name="select_a_product">एक उत्पाद का चयन करें</string>
+
     <string name="category">	वर्ग	</string>
     <string name="select_category">	कला श्रेणी का चयन करें:	</string>
     <string name="product">	उत्पाद	</string>
