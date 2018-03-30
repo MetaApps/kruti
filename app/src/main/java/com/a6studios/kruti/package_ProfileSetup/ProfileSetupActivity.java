@@ -37,7 +37,7 @@ public class ProfileSetupActivity extends AppCompatActivity implements View.OnCl
 
     final int PICK_IMAGE_REQUEST = 71;
 
-    String name;
+    String name, tts_text;
 
     TextToSpeech textToSpeech;
     ImageButton btn_product_tts, btn_description_tts, btn_capacity_tts, btn_address_tts;
@@ -121,24 +121,37 @@ public class ProfileSetupActivity extends AppCompatActivity implements View.OnCl
             case R.id.btn_save_profile : Intent intent = new Intent(this, MainActivity.class);
                                             startActivity(intent);
                                             break;
-            case R.id.btn_address_info : speakOut();
-            case R.id.btn_capacity_info :
-            case R.id.btn_description_info :
-            case R.id.btn_product_info : speakOut(); break;
+            case R.id.btn_address_tts : tts_text = getResources().getString(R.string.enter_address); break;
+            case R.id.btn_capacity_tts : tts_text = getResources().getString(R.string.enter_production_capacity); break;
+            case R.id.btn_description_tts : tts_text = getResources().getString(R.string.enter_product_description);break;
+            case R.id.btn_product_tts : tts_text = getResources().getString(R.string.select_a_product);break;
+            default : tts_text = null;
         }
-
-    }
-
-    private void speakOut(View v){
-
     }
 
     private void speakOut(){
+        //String text = getResources().getString(i);
+        textToSpeech.speak(tts_text,TextToSpeech.QUEUE_FLUSH,null);
+    }
 
-        //String text = String.valueOf(R.string.select_a_product);
+    @Override
+    protected void onDestroy() {
+        if(textToSpeech != null){
+            textToSpeech.stop();
+            textToSpeech.shutdown();
+        }
+        super.onDestroy();
+    }
+
+    /*private void speakOut(){
+
+        *//*btn_address_tts.setOnClickListener(this);
+        btn_capacity_tts.setOnClickListener(this);
+        btn_description_tts.setOnClickListener(this);
+        btn_product_tts.setOnClickListener(this);*//*
         String text = getResources().getString(R.string.select_a_product);
         textToSpeech.speak(text,TextToSpeech.QUEUE_FLUSH,null);
-    }
+    }*/
 
     @Override
     public void onInit(int i) {
