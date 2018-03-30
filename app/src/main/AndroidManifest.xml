@@ -24,15 +24,15 @@
             </intent-filter>
             -->
         </activity>
-        <activity
+        <!--<activity
             android:name=".package_QRScanner.QRScannerActivity"
             android:screenOrientation="portrait">
-            <!--<intent-filter>
+            &lt;!&ndash;<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
-        </activity>
+            </intent-filter>&ndash;&gt;
+        </activity>-->
         <activity
             android:name=".package_OTPVerification.OTPVerificationActivity"
             android:screenOrientation="portrait" />

@@ -27,7 +27,8 @@ import java.util.BitSet;
 import java.util.Locale;
 import java.util.jar.Attributes;
 
-public class ProfileSetupActivity extends AppCompatActivity implements View.OnClickListener, TextToSpeech.OnInitListener {
+public class
+ProfileSetupActivity extends AppCompatActivity implements View.OnClickListener, TextToSpeech.OnInitListener {
 
     Button btn_save_profile;
     ImageView imageView;

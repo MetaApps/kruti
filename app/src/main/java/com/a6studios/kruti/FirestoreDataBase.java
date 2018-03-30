@@ -40,9 +40,6 @@ public class FirestoreDataBase {
         return mFirestoreDatabase;
     }
 
-    public static FirestoreDataBase getmFirestoreDatabase() {
-        return mFirestoreDatabase;
-    }
 
     public static FirebaseFirestore getDb() {
         return db;
