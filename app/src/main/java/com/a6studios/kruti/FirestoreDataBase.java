@@ -1,9 +1,14 @@
 package com.a6studios.kruti;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreSettings;
+import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QuerySnapshot;
 
 /**
  * Created by user on 3/24/2018.
@@ -61,4 +66,5 @@ public class FirestoreDataBase {
         settings=null;
         mFirestoreDatabase = null;
     }
+
 }

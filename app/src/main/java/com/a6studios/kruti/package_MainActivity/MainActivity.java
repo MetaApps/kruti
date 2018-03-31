@@ -9,14 +9,25 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.a6studios.kruti.FirestoreDataBase;
 import com.a6studios.kruti.R;
 import com.a6studios.kruti.package_AskQuery.AskQueryActivity;
+import com.a6studios.kruti.package_LanguageSelection.LanguageSelectionActivity;
+import com.a6studios.kruti.package_ProfileSetup.ProfileSetupActivity;
+import com.firebase.ui.auth.AuthUI;
+import com.firebase.ui.auth.ErrorCodes;
+import com.firebase.ui.auth.IdpResponse;
+import com.firebase.ui.auth.ResultCodes;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.Arrays;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -28,7 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     LinearLayout ask_query_ll, chat, profile, call;
     TextView ask_query_text, chat_text, profile_text, call_text;
     CardView ask_query_cv, call_cv;
-
+    FirestoreDataBase fdb;
+    private static final int RC_SIGN_IN = 123;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,8 +79,61 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         textSlider.setAdapter(textSliderAdapter);
         Timer timer = new Timer();
         timer.scheduleAtFixedRate(new SliderTimer(), 2000, 4000);
+
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(FirebaseAuth.getInstance().getCurrentUser()==null) {
+            FirestoreDataBase.cleanUp();
+            Intent i = new Intent(this, LanguageSelectionActivity.class);
+            startActivity(i);
+            finish();
+            /*startActivityForResult(
+                    AuthUI.getInstance()
+                            .createSignInIntentBuilder()
+                            .setAvailableProviders(
+                                    Arrays.asList(
+                                            new AuthUI.IdpConfig.Builder(AuthUI.PHONE_VERIFICATION_PROVIDER).build()
+                                    ))
+                            .build(),
+                    RC_SIGN_IN);*/
+        }
+    }
+
+    /*protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        // RC_SIGN_IN is the request code you passed into startActivityForResult(...) when starting the sign in flow.
+        if (requestCode == RC_SIGN_IN) {
+            IdpResponse response = IdpResponse.fromResultIntent(data);
+            // Successfully signed in
+            if (resultCode == ResultCodes.OK) {
+                FirestoreDataBase fb = FirestoreDataBase.getFirestoreDatabase();
+                Intent i = new Intent(this, ProfileSetupActivity.class);
+                startActivity(i);
+                finish();
+                return;
+            } else {
+                // Sign in failed
+                String s;
+                if (response == null) {
+                    // User pressed back button
+                    Log.e("Login","Login canceled by User");
+                    return;
+                }
+                if (response.getErrorCode() == ErrorCodes.NO_NETWORK) {
+                    Log.e("Login","No Internet Connection");
+                    return;
+                }
+                if (response.getErrorCode() == ErrorCodes.UNKNOWN_ERROR) {
+                    Log.e("Login","Unknown Error");
+                    return;
+                }
+            }
+            Log.e("Login","Unknown sign in response");
+        }
+    }*/
     @Override
     public void onClick(View view) {
         if (view == ask_query_ll || view == ask_query_cv || view == ask_query_text) {

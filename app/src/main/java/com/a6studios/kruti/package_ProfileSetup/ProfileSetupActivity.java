@@ -12,17 +12,23 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ScrollView;
+import android.widget.Spinner;
+import android.widget.SpinnerAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.a6studios.kruti.R;
 import com.a6studios.kruti.package_MainActivity.MainActivity;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.Locale;
 import java.util.jar.Attributes;
@@ -40,6 +46,10 @@ ProfileSetupActivity extends AppCompatActivity implements View.OnClickListener, 
 
     String name, tts_text;
 
+    Spinner spinner_productList;
+    String[] product_list;
+    ArrayAdapter<String> productListArrayAdapter;
+
     TextToSpeech textToSpeech;
     ImageButton btn_product_tts, btn_description_tts, btn_capacity_tts, btn_address_tts;
 
@@ -49,7 +59,12 @@ ProfileSetupActivity extends AppCompatActivity implements View.OnClickListener, 
         setContentView(R.layout.activity_profile_setup);
 
         btn_save_profile = (Button) findViewById(R.id.btn_save_profile);
-        btn_save_profile.setOnClickListener(this);
+        btn_save_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startMainActivity();
+            }
+        });
 
         imageView = (ImageView) findViewById(R.id.imageView);
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -60,6 +75,27 @@ ProfileSetupActivity extends AppCompatActivity implements View.OnClickListener, 
         });
 
         name_tv = (TextView) findViewById(R.id.name_tv);
+
+
+        //Product list spinner
+        product_list = getResources().getStringArray(R.array.product_list);
+        /*for(String x:product_list)
+            productListArrayAdapter.add(x);*/
+        productListArrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,product_list);
+        spinner_productList = (Spinner) findViewById(R.id.product_list_spinner);
+        productListArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner_productList.setAdapter(productListArrayAdapter);
+        spinner_productList.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(getApplicationContext(),"position = "+position,Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         /*SharedPreferences sharedPreferences = getSharedPreferences("uid_details",MODE_PRIVATE);
         String name_val = getResources().getString(N);
@@ -96,6 +132,11 @@ ProfileSetupActivity extends AppCompatActivity implements View.OnClickListener, 
         startActivityForResult(Intent.createChooser(intent,"Select Picture"), PICK_IMAGE_REQUEST);
     }
 
+    void startMainActivity(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -119,9 +160,9 @@ ProfileSetupActivity extends AppCompatActivity implements View.OnClickListener, 
     public void onClick(View view) {
         textToSpeech = new TextToSpeech(this,this);
         switch (view.getId()){
-            case R.id.btn_save_profile : Intent intent = new Intent(this, MainActivity.class);
+            /*case R.id.btn_save_profile : Intent intent = new Intent(this, MainActivity.class);
                                             startActivity(intent);
-                                            break;
+                                            break;*/
             case R.id.btn_address_tts : tts_text = getResources().getString(R.string.enter_address); break;
             case R.id.btn_capacity_tts : tts_text = getResources().getString(R.string.enter_production_capacity); break;
             case R.id.btn_description_tts : tts_text = getResources().getString(R.string.enter_product_description);break;
