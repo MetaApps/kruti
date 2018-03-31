@@ -85,6 +85,7 @@ public class FirestoreDataBase {
         final ProgressDialog progressDialog = new ProgressDialog(profileSetupActivity);
         progressDialog.setTitle("Uploading");
         progressDialog.show();
+        progressDialog.setCanceledOnTouchOutside(false);
         UploadTask uploadTask = storageRef.child("images/" + FirebaseAuth.getInstance().getCurrentUser().getUid()).putFile(filePath);
         uploadTask.addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
 
