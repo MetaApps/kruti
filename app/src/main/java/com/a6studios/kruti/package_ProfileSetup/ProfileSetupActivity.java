@@ -1,5 +1,6 @@
 package com.a6studios.kruti.package_ProfileSetup;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
@@ -23,6 +24,7 @@ import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.a6studios.kruti.FirestoreDataBase;
 import com.a6studios.kruti.R;
 import com.a6studios.kruti.package_MainActivity.MainActivity;
 
@@ -145,9 +147,11 @@ ProfileSetupActivity extends AppCompatActivity implements View.OnClickListener, 
             filePath = data.getData();
 
             try{
-                Bitmap bitMap = MediaStore.Images.Media.getBitmap(getContentResolver(), filePath);
+                Bitmap bitMap = MediaStore.Images.Media.getBitmap(getContentResolver(),filePath);
                 imageView.setCropToPadding(true);
                 imageView.setImageBitmap(bitMap);
+                FirestoreDataBase fdb = FirestoreDataBase.getFirestoreDatabase();
+                fdb.addImage(filePath, this);
             } catch (FileNotFoundException e) {
                 e.printStackTrace();
             } catch (IOException e) {
