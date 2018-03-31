@@ -100,5 +100,6 @@ public class FirestoreDataBase {
                 Toast.makeText(profileSetupActivity,"Failed Upload", Toast.LENGTH_SHORT);
             }
         });
+
     }
 }
