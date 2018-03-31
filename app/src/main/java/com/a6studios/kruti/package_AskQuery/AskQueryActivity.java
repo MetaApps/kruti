@@ -11,6 +11,7 @@ import com.a6studios.kruti.package_QueryForm.QueryFormActivity;
 
 public class AskQueryActivity extends Activity implements View.OnClickListener {
 
+
     FloatingActionButton add_query_fab;
 
     @Override
